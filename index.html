@@ -4,16 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Habit Tracker</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="bg-blue-200">
   <h1>My Habit Tracker</h1>
   <form>
-    <label for="habit">Habit:</label>
-    <input id="habit" placeholder="Reading" type="text">
-    <button id="add-habit-btn">Add Habit</button>
+    <label for="habit" class="text-left text-blue-500">Habit:</label>
+    <input id="habit" placeholder="Reading" type="text" class="text-left text-black-500">
+    <button id="add-habit-btn" class="bg-green-300 text-xs border rounded-lg hover:bg-green-500">Add</button>
   </form>
-  <ul id="habit-list">
+  <ul id="habit-list" class="bg-black-500 text-white border rounded-lg p-px m-px">
 
   </ul>
   <script src="app.js"></script>
