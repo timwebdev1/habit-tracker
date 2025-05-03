@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,16 +8,20 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-blue-200">
-  <h1>My Habit Tracker</h1>
-  <form>
-    <label for="habit" class="text-left text-blue-500">Habit:</label>
-    <input id="habit" placeholder="Reading" type="text" class="text-left text-black-500">
-    <button id="add-habit-btn" class="bg-green-300 text-xs border rounded-lg hover:bg-green-500">Add</button>
-  </form>
-  <ul id="habit-list" class="bg-black-500 text-white border rounded-lg p-px m-px">
 
-  </ul>
+<body class="bg-gray-900 p-2 m-1">
+  <section>
+    <h1 class="text-blue-700 font-bold text-xl">My Habit Tracker</h1>
+    <form class="flex gap-x-2 max-w-md mx-auto text-[min10vw, 70px]">
+      <input class="text-black text-xs w-full border border-blue-400" id="habit" type="text" placeholder="Write new habit here!">
+      <button class="border-white text-green-700 rounded-sm hover:border-transparent hover:bg-green-600 hover:text-white active:bg-green-700 text-xs w-auto" id="add-habit-btn">Add</button>
+    </form>
+  </section>
+  <section class="text-white">
+    <ul id="habit-list" class="bg-violet-200 w-full border-2 border-violet-600 rounded-md my-4 p-2">My Habit List:
+    </ul>
+  </section>
   <script src="app.js"></script>
 </body>
+
 </html>
