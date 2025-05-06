@@ -56,8 +56,28 @@ function renderHabits() {
     checkbox.type = 'checkbox';
     checkbox.checked = habit.completed;
 
+    checkbox.addEventListener('change', function() {
+      const id = card.getAttribute('data-id');
+      const habitToUpdate = habitList.find(h => h.id === Number(id));
+
+      habitToUpdate.completed = !habitToUpdate.completed;
+      saveHabits();
+      renderHabits();
+    })
+
     const deleteBtn = document.createElement('button');
     deleteBtn.textContent = 'Delete';
+
+    deleteBtn.addEventListener('click', function() {
+      const id = card.getAttribute('data-id');
+      const index = habitList.findIndex(h => h.id === Number(id));
+
+      if (index !== -1) {
+        habitList.splice(index, 1);
+        saveHabits();
+        renderHabits();
+      }
+    })
 
     card.appendChild(title);
     card.appendChild(checkbox);
