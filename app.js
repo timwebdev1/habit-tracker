@@ -36,13 +36,15 @@ document.getElementById("habit-form").addEventListener("submit", function (e) {
   addHabit();
 });
 
+
 function renderHabits() {
+  habitList.sort((a, b) => a.completed - b.completed);
   const habitContainer = document.getElementById('habit-list');
   habitContainer.innerHTML = '';
 
   for(const habit of habitList) {
     const card = document.createElement('div');
-    card.classList.add('p-4', 'rounded-lg', 'shadow', 'bg-white', 'dark:bg-slate-800');
+    card.classList.add('p-4', 'rounded-lg', 'shadow', 'bg-white');
     card.setAttribute('data-id', habit.id);
 
     const title = document.createElement('h3');
